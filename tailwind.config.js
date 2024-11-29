@@ -22,6 +22,31 @@ module.exports = {
         "hero-pattern": "url('/src/assets/herobg.png')",
       },
     },
+    keyframes: {
+        spin: {
+          '0%, 100%': { boxShadow: '0.2em 0 0 0 currentColor' },
+          '12%': { boxShadow: '0.2em 0.2em 0 0 currentColor' },
+          '25%': { boxShadow: '0 0.2em 0 0 currentColor' },
+          '37%': { boxShadow: '-0.2em 0.2em 0 0 currentColor' },
+          '50%': { boxShadow: '-0.2em 0 0 0 currentColor' },
+          '62%': { boxShadow: '-0.2em -0.2em 0 0 currentColor' },
+          '75%': { boxShadow: '0 -0.2em 0 0 currentColor' },
+          '87%': { boxShadow: '0.2em -0.2em 0 0 currentColor' },
+        },
+        rotate: {
+          '0%': { transform: 'translate(-50%, -50%) rotateZ(0deg)' },
+          '100%': { transform: 'translate(-50%, -50%) rotateZ(360deg)' },
+        },
+        rotateccw: {
+          '0%': { transform: 'translate(-50%, -50%) rotate(0deg)' },
+          '100%': { transform: 'translate(-50%, -50%) rotate(-360deg)' },
+        },
+      },
+      animation: {
+        spin: 'spin 1s linear infinite',
+        rotate: 'rotate 1s linear infinite',
+        rotateccw: 'rotateccw 1s linear infinite',
+      },
   },
   plugins: [],
 };
